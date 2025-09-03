@@ -1,0 +1,34 @@
+query RunInput {
+  deliveryCustomization {
+    metafield(
+      namespace: "$app:delivery-customization"
+      key: "function-configuration"
+    ) {
+      value
+    }
+  }
+  cart {
+    lines {
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          product {
+            hasTags(tags: ["Hazardous","hazardous"]) {
+              hasTag
+              tag
+            }
+          }
+        }
+      }
+    }
+    deliveryGroups {
+      deliveryAddress {
+        countryCode
+      }
+      deliveryOptions {
+        title # This is an OPTIONAL field in the input data. It doesn't have a ! at the end in the graphql schema
+        handle
+      }
+    }
+  }
+}
