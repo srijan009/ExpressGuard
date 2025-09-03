@@ -7,7 +7,7 @@ This Shopify app contains delivery-customization extension that hides the Expres
 ## Prerequisites
 
 - We must run the **delivery customization mutation** before, then only the function logic can execute.  
-- Once successfully installed and the mutation is executed, **Express (3 Business Days, Mon–Fri)** will appear as a delivery option if the customer has added products tagged with **Hazardous** (case-insensitive, e.g., `Hazardous` or `hazardous`) to their cart.
+- Once successfully installed and the mutation is executed, **Express (3 Business Days, Mon–Fri)** will not appear as a delivery option if the customer has added products tagged with **Hazardous** (case-insensitive, e.g., `Hazardous` or `hazardous`) to their cart.
 
 ---
 
